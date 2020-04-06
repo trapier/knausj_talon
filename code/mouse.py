@@ -148,18 +148,18 @@ class Actions:
         if eye_zoom_mouse.zoom_mouse.enabled:
             eye_zoom_mouse.zoom_mouse.on_pop(eye_zoom_mouse.zoom_mouse.state)
 
-    def mouse_drag():
+    def mouse_drag(button: int):
         """(TEMPORARY) Press and hold/release button 0 depending on state for dragging"""
         # todo: fixme temporary fix for drag command
         button_down = len(list(ctrl.mouse_buttons_down())) > 0
         # print(str(ctrl.mouse_buttons_down()))
         if not button_down:
             # print("start drag...")
-            ctrl.mouse_click(button=0, down=True)
+            ctrl.mouse_click(button=button, down=True)
             # app.notify("drag started")
         else:
             # print("end drag...")
-            ctrl.mouse_click(button=0, up=True)
+            ctrl.mouse_click(button=button, up=True)
 
         # app.notify("drag stopped")
 
@@ -303,12 +303,12 @@ def scroll_continuous_helper():
     if scroll_amount and (
         eye_zoom_mouse.zoom_mouse.state == eye_zoom_mouse.STATE_IDLE
     ):  # or eye_zoom_mouse.zoom_mouse.state == eye_zoom_mouse.STATE_SLEEP):
-        actions.mouse_scroll(by_lines=False, y=int(scroll_amount / 10))
+        actions.mouse_scroll(by_lines=True, y=1)
 
 
 def start_scroll():
     global scroll_job
-    scroll_job = cron.interval("60ms", scroll_continuous_helper)
+    scroll_job = cron.interval("300ms", scroll_continuous_helper)
     # if eye_zoom_mouse.zoom_mouse.enabled and eye_mouse.mouse.attached_tracker is not None:
     #    eye_zoom_mouse.zoom_mouse.sleep(True)
 

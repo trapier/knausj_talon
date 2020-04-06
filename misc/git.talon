@@ -4,7 +4,6 @@ and tag: user.git
 # Standard commands
 git add patch: "git add . -p\n"
 git add: "git add "
-git add everything: "git add -u\n"
 git bisect: "git bisect "
 git blame: "git blame "
 git branch: "git branch "
@@ -20,11 +19,7 @@ git cherry pick abort: "git cherry-pick --abort "
 git cherry pick skip: "git cherry-pick --skip "
 git clone: "git clone "
 # Leave \n out for confirmation since the operation is destructive
-git clean everything: "git clean -dfx"
-git commit message <user.text>: "git commit -m '{text}'"
-git commit: "git commit\n"
-git diff (colour|color) words: "git diff --color-words "
-git diff: "git diff "
+git clean everything:
 git diff cached: "git diff --cached\n"
 git fetch: "git fetch\n"
 git fetch <user.text>: "git fetch {text}"
@@ -34,6 +29,7 @@ git log all: "git log\n"
 git log all changes: "git log -c\n"
 git log: "git log "
 git log changes: "git log -c "
+git log oneline: "git log --oneline"
 git merge: "git merge "
 git merge <user.text>:"git merge {text}"
 git move: "git mv "
@@ -51,6 +47,7 @@ git push tags: "git push --tags\n"
 git rebase: "git rebase\n"
 git rebase continue: "git rebase --continue"
 git rebase skip: "git rebase --skip"
+git reflog: "git reflog\n"
 git remove: "git rm "
 git (remove|delete) branch: "git branch -d "
 git (remove|delete) remote branch: "git push --delete origin "
@@ -101,3 +98,4 @@ git commit highlighted:
     insert("git add ")
     edit.paste()
     insert("\ngit commit\n")
+hub pr checkout: "hub pr checkout "

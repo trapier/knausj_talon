@@ -48,17 +48,25 @@ midclick:
 	# close the mouse grid
 	user.grid_close()
 drag: 
-	user.mouse_drag()
+	user.mouse_drag(0)
+	# close the mouse grid
+	user.grid_close()
+drag (ricky|rickle|second|two): 
+	user.mouse_drag(1)
+	# close the mouse grid
+	user.grid_close()
+drag (midclick): 
+	user.mouse_drag(2)
 	# close the mouse grid
 	user.grid_close()
 wheel down: user.mouse_scroll_down()
 wheel down here:
     user.mouse_move_center_active_window()
     user.mouse_scroll_down()
-wheel tiny [down]: mouse_scroll(20)
+wheel tiny [down]: mouse_scroll(1)
 wheel tiny [down] here:
     user.mouse_move_center_active_window()
-    mouse_scroll(20)
+    mouse_scroll(1)
 wheel downer: user.mouse_scroll_down_continuous()
 wheel downer here:
     user.mouse_move_center_active_window()
@@ -66,10 +74,10 @@ wheel downer here:
 wheel up: user.mouse_scroll_up()
 wheel up here:
  user.mouse_scroll_up()
-wheel tiny up: mouse_scroll(-20)
+wheel tiny up: mouse_scroll(-1)
 wheel tiny up here:
     user.mouse_move_center_active_window()
-    mouse_scroll(-20)
+    mouse_scroll(-1)
 wheel upper: user.mouse_scroll_up_continuous()
 wheel upper here:
     user.mouse_move_center_active_window()

@@ -184,11 +184,12 @@ class MouseSnapNine:
             y = self.screen.y + (self.screen.height - h) / 2
             self.draw_zoom(canvas, x, y, w, h)
             draw_grid(x, y, w, h)
+            paint.textsize += 48 - self.count * 3
             draw_text(x, y, w, h)
         else:
             draw_grid(self.rect.x, self.rect.y, self.rect.width, self.rect.height)
 
-            paint.textsize += 12 - self.count * 3
+            paint.textsize += 48 - self.count * 3
             draw_text(self.rect.x, self.rect.y, self.rect.width, self.rect.height)
 
     def calc_narrow(self, which, rect):

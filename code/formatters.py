@@ -127,6 +127,7 @@ formatters_dict = {
     "ALL_LOWERCASE": (SEP, every_word(lambda w: w.lower())),
     "DOUBLE_QUOTED_STRING": (SEP, surround('"')),
     "SINGLE_QUOTED_STRING": (SEP, surround("'")),
+    "BACKTICK_QUOTED_STRING": (SEP, surround("`")),
     "SPACE_SURROUNDED_STRING": (SEP, surround(" ")),
     "DOT_SEPARATED": words_with_joiner("."),
     "DOT_SNAKE": (NOSEP, lambda i, word, _: "." + word if i == 0 else "_" + word),
@@ -152,6 +153,7 @@ formatters_words = {
     "dubstring": formatters_dict["DOUBLE_QUOTED_STRING"],
     "dunder": formatters_dict["DOUBLE_UNDERSCORE"],
     "hammer": formatters_dict["PUBLIC_CAMEL_CASE"],
+    "literal": formatters_dict["BACKTICK_QUOTED_STRING"],
     "kebab": formatters_dict["DASH_SEPARATED"],
     "packed": formatters_dict["DOUBLE_COLON_SEPARATED"],
     "padded": formatters_dict["SPACE_SURROUNDED_STRING"],
@@ -162,6 +164,7 @@ formatters_words = {
     "snake": formatters_dict["SNAKE_CASE"],
     # "speak": formatters_dict["NOOP"],
     "string": formatters_dict["SINGLE_QUOTED_STRING"],
+    "termdash": formatters_dict["TERMINAL_DASH_SEPARATED"],
     "title": formatters_dict["CAPITALIZE_ALL_WORDS"],
     # disable a few formatters for now
     # "tree": formatters_dict["FIRST_THREE"],
