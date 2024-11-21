@@ -57,6 +57,9 @@ class UserActions:
     def slack_open_threads():
         actions.key("ctrl-shift-t")
 
+    def slack_open_home():
+        actions.key("ctrl-shift-1")
+
     def slack_go_back():
         actions.key("alt-left")
 

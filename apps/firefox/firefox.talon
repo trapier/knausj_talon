@@ -14,3 +14,5 @@ tab search <user.text>$:
 
 (sidebar | panel) bookmarks: user.firefox_bookmarks_sidebar()
 (sidebar | panel) history: user.firefox_history_sidebar()
+(sidebar | panel) tabs:
+    key(ctrl-.)

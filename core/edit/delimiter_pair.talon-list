@@ -18,6 +18,7 @@ quad: '" "'
 skis: ` `
 percentages: % %
 pad: space space
+pompom: * *
 
 escaped quad: '\\" \\"'
 escaped twin: "\\' \\'"

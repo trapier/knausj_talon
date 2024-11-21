@@ -58,6 +58,10 @@ class UserActions:
     def slack_open_threads():
         actions.key("cmd-shift-t")
 
+    def slack_open_threads():
+        actions.key("cmd-shift-1")
+
+
     def slack_go_back():
         actions.key("cmd-[")
 

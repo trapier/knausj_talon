@@ -14,6 +14,7 @@ focus (move | next): key(ctrl-`)
 (slack | lack) (starred [items] | stars): user.slack_open_starred_items()
 (slack | lack) [direct] messages: user.slack_open_direct_messages()
 (slack | lack) threads: user.slack_open_threads()
+(slack | lack) home: user.slack_open_home()
 (slack | lack) (history [next] | back | backward): user.slack_go_back()
 (slack | lack) forward: user.slack_go_forward()
 

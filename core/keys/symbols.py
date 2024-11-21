@@ -70,7 +70,7 @@ old_symbols = [
     Symbol("@", ["at symbol", "at sign"]),
     Symbol("°", ["degree sign"], ["degree", "degrees"]),
     Symbol("&", ["ampersand", "and sign"], ["amper"]),
-    Symbol("-", ["hyphen"], ["minus", "dash"]),
+    Symbol("-", ["hyphen"], ["minus", "dash", "tack"]),
     Symbol("–", ["en dash", "nut dash"]),
     Symbol("—", ["em dash", "mutton dash"]),
     Symbol("=", None, ["equals"]),

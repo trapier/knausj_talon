@@ -14,6 +14,8 @@ desk flip | flipper: user.i3msg("workspace back_and_forth")
 (win | window) right: user.i3msg("focus right")
 (win | window) up: user.i3msg("focus up")
 (win | window) down: user.i3msg("focus down")
+(win | window) back: user.i3msg("[con_mark=_last] focus")
+(win | window) urgent: user.i3msg("[urgent=latest] focus")
 (win | window) kill: app.window_close()
 (win | window) (stacking | stacked): user.i3wm_layout("stacking")
 (win | window) default: user.i3wm_layout()
@@ -55,9 +57,9 @@ vertical (shell | terminal):
 
 # XXX - just replace with shuffle eventually?
 # XXX - like also need to match the generic talon commands
-(shuffle | move (win | window) [to] port) <number_small>:
+(shuffle | move) (win | window) [to] (port | desk) <number_small>:
     user.i3msg("move container to workspace number {number_small}")
-(shuffle | move (win | window) [to]) last port:
+(shuffle | move) (win | window) [to] last (port | desk):
     user.i3msg("move container to workspace back_and_forth")
 (shuffle | move) flipper: user.i3msg("move container to workspace back_and_forth")
 (shuffle | move (win | window)) {user.arrow_key}: user.i3msg("move {arrow_key}")

@@ -34,6 +34,8 @@ mod.tag(
 )
 
 
+mouse_cursor_shown = True
+
 @mod.action_class
 class Actions:
     def mouse_cursor_show():
@@ -44,6 +46,11 @@ class Actions:
         """Hides the cursor"""
         show_cursor_helper(False)
 
+    def mouse_cursor_toggle():
+        """Hides the cursor"""
+        global mouse_cursor_shown
+        mouse_cursor_shown = not(mouse_cursor_shown)
+        show_cursor_helper(mouse_cursor_shown)
 
 def show_cursor_helper(show: bool):
     """Show/hide the cursor"""

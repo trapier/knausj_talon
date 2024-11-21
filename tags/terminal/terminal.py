@@ -13,7 +13,7 @@ class Actions:
     def terminal_list_directories(path: Optional[str] = None):
         """Lists directories"""
 
-    def terminal_list_all_directories():
+    def terminal_list_all_directories(path: str):
         """Lists all directories including hidden"""
 
     def terminal_change_directory(path: str):

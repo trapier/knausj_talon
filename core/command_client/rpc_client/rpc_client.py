@@ -51,7 +51,7 @@ class Actions:
             )
             if args or return_command_output:
                 raise Exception(
-                    "Communication directory not found. Must use command-server extension for advanced commands"
+                    f"Communication directory {communication_dir_path} not found. Must use command-server extension for advanced commands"
                 )
             raise NoFileServerException("Communication directory not found")
 

@@ -20,7 +20,7 @@ grep
 help
 in it: init
 log
-ls files: ls-files
+lisa files: ls-files
 merge
 merge tool: mergetool
 move: mv

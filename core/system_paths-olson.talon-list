@@ -1,0 +1,16 @@
+list: user.system_paths
+hostname: olson
+-
+user: /home/trapier
+desktop: /home/trapier/Desktop
+desk: /home/trapier/Desktop
+documents: /home/trapier/Documents
+docks: /home/trapier/Documents
+downloads: /home/trapier/Downloads
+music: /home/trapier/Music
+pictures: /home/trapier/Pictures
+videos: /home/trapier/Videos
+talon home: /home/trapier/.talon
+talon recordings: /home/trapier/.talon/recordings
+talon user: /home/trapier/.talon/user
+home: /home/trapier

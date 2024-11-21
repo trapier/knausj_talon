@@ -19,7 +19,10 @@ time_last_pop = 0
 class UserActions:
     def noise_trigger_pop():
         # Since zoom mouse is registering against noise.register("pop", on_pop), let that take priority
-        if actions.tracking.control_zoom_enabled():
+        is_using_eye_tracker = ( actions.tracking.control_zoom_enabled()
+            or actions.tracking.control_enabled()
+            or actions.tracking.control1_enabled())
+        if is_using_eye_tracker:
             return
         global time_last_pop
         delta = time.perf_counter() - time_last_pop

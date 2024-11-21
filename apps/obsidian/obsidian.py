@@ -25,7 +25,7 @@ mod = Module()
 # Expand app detection similar to VSCode to support all OS variants
 mod.apps.obsidian = """
 os: linux
-and app.name: Obsidian
+and app.name: md.Obsidian
 """
 mod.apps.obsidian = """
 os: mac

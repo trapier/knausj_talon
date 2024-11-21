@@ -52,6 +52,9 @@ class Actions:
     def slack_open_threads():
         """Opens threads in Slack"""
 
+    def slack_open_home():
+        """Opens home in Slack"""
+
     def slack_go_back():
         """Navigates back in Slack"""
 

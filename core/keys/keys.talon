@@ -11,3 +11,12 @@ spike <user.symbol_key>: user.end_line_with_symbol_and_start_line(symbol_key)
 press <user.modifiers>: key(modifiers)
 # for consistency with dictation mode and explicit arrow keys if you need them.
 press <user.keys>: key(keys)
+
+# via https://github.com/edvinhellsing/knausj_talon/blob/df21152406305c9ead308a0b5eb17526469d44ea/core/keys/keys.talon#L12
+# press and hold a modifier
+hold <user.modifiers>:
+    key("{modifiers}:down")
+    user.gui_hold_modifier_toggle(1, "{modifiers}")
+(lift | unhold | release) <user.modifiers>:
+    key("{modifiers}:up")
+    user.gui_hold_modifier_toggle(0, "{modifiers}")

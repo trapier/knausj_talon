@@ -5,3 +5,6 @@ set volume <number>: user.media_set_volume(number)
 [media] play next: key(next)
 [media] play previous: key(prev)
 media (play | pause): user.play_pause()
+
+more bright: key(brightness_up)
+less bright: key(brightness_down)

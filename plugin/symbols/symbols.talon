@@ -1,5 +1,5 @@
 new line: "\n"
-double dash: "--"
+(term dash|double dash|dub tack): "--"
 triple quote: "'''"
 triple grave | triple back tick | gravy: "```"
 dot dot | dotdot: ".."
